@@ -1,4 +1,4 @@
-function verbGaze
+function ToPICK
 ListenChar(0);
 KbName('UnifyKeyNames');  
 quitKey = KbName('ESCAPE');
@@ -58,7 +58,7 @@ try
     
     %% Play Setup Movie
     %moviename = {'/Users/babylab/Documents/MATLAB/Mira/IDSLearn/Rio_cropped.mp4'}; %access video (muppets, to play during set-up)
-    moviename = {'Users/babylab/Desktop/ToPICK/2 - methods/video stim/MuppetShow_MahnaMahna.mp4'}; %access video (muppets, to play during set-up)
+    moviename = {'Users/babylab/Desktop/ToPICK/stimuli/video/MuppetShow_MahnaMahna.mp4'}; %access video (muppets, to play during set-up)
     %moviename = {'/Users/babylab/Documents/MATLAB/Mira/IDSLearn/Sesame_Street_Walk_55db.mp4'};
     
     play_video(moviename,window,0)
@@ -265,8 +265,8 @@ try
     videoList_masterR = [];
     videoTestList_masterL = [];
     videoTestList_masterR = [];
-    video_exposure_base_path = 'Users/babylab/Desktop/ToPICK/2 - methods/video stim/exposure_verbs/';
-    video_test_base_path = 'Users/babylab/Desktop/ToPICK/2 - methods/video stim/test_verbs/';
+    video_exposure_base_path = 'Users/babylab/Desktop/ToPICK/stimuli/video/exposure_verbs/';
+    video_test_base_path = 'Users/babylab/Desktop/ToPICK/stimuli/video/test_verbs/';
     
     
     % For Exposure videos
@@ -302,7 +302,7 @@ try
     audioList_master1 = [];
     audioList_master2 = [];
     
-    audio_exposure_base_path = '/Users/babylab/Desktop/ToPICK/2 - methods/audio stim/exposure/';
+    audio_exposure_base_path = '/Users/babylab/Desktop/ToPICK/stimuli/audio/exposure/';
     
     %naudio = 24;
     naudio = 12;
@@ -324,7 +324,7 @@ try
     
     % for Test audio
     audioTestList_master = [];
-    audio_test_base_path = '/Users/babylab/Desktop/ToPICK/2 - methods/audio stim/test/';
+    audio_test_base_path = '/Users/babylab/Desktop/ToPICK/stimuli/audio/test/';
     
     naudio = 8;
     for i = 1:naudio
@@ -343,7 +343,7 @@ try
         
         % Path to informant files
         informantList_master = [];
-        informant_base_path = 'Users/babylab/Desktop/ToPICK/2 - methods/video stim/informant/gaze/';
+        informant_base_path = 'Users/babylab/Desktop/ToPICK/stimuli/video/informant/gaze/';
         
         % Get audio order
         audioOrderList = exposure_rand_table.audioOrder(:);
@@ -382,7 +382,7 @@ try
         
         % Path to informant no-gaze files
         informantList_master = [];
-        informant_base_path = 'Users/babylab/Desktop/ToPICK/2 - methods/video stim/informant/no-gaze/';
+        informant_base_path = 'Users/babylab/Desktop/ToPICK/stimuli/video/informant/no-gaze/';
         
         % Get audio order
         audioOrderList = exposure_rand_table.audioOrder(:);
@@ -489,10 +489,10 @@ try
     %%%%%%%%%%%%%%%%%%%%%%%%%%
     %%%%% Warm-up trials %%%%%
     %%%%%%%%%%%%%%%%%%%%%%%%%%
-    imgList = cellstr(['/Users/babylab/Desktop/ToPICK/2 - methods/img stim/a1.png'; ...
-        '/Users/babylab/Desktop/ToPICK/2 - methods/img stim/a2.png']);
+    imgList = cellstr(['/Users/babylab/Desktop/ToPICK/stimuli/images/a1.png'; ...
+        '/Users/babylab/Desktop/ToPICK/stimuli/images/a2.png']);
     
-    audio = '/Users/babylab/Desktop/ToPICK/2 - methods/audio stim/toy.wav';
+    audio = '/Users/babylab/Desktop/ToPICK/stimuli/audio/toy.wav';
     
     show_images_with_audio(imgList, window, audio);
     
@@ -531,18 +531,18 @@ try
             
             % Attention-getter
             if trial == 4
-                video = {'Users/babylab/Desktop/ToPICK/2 - methods/video stim/bubbles.blue.mp4'};
-                audio = '/Users/babylab/Desktop/ToPICK/2 - methods/audio stim/attention-getters/seeThat.wav';
+                video = {'Users/babylab/Desktop/ToPICK/stimuli/video/bubbles.blue.mp4'};
+                audio = '/Users/babylab/Desktop/ToPICK/stimuli/audio/attention-getters/seeThat.wav';
                 play_video_with_audio(video, window, trial, audio, width, height);
                 
             elseif trial == 8
-                video = {'Users/babylab/Desktop/ToPICK/2 - methods/video stim/bubbles.orange.mp4'};
-                audio = '/Users/babylab/Desktop/ToPICK/2 - methods/audio stim/attention-getters/wowLookAtThis.wav';
+                video = {'Users/babylab/Desktop/ToPICK/stimuli/video/bubbles.orange.mp4'};
+                audio = '/Users/babylab/Desktop/ToPICK/stimuli/audio/attention-getters/wowLookAtThis.wav';
                 play_video_with_audio(video, window, trial, audio, width, height);
                 
             elseif trial == 12
-                video = {'Users/babylab/Desktop/ToPICK/2 - methods/video stim/bubbles.multi.mp4'};
-                audio = '/Users/babylab/Desktop/ToPICK/2 - methods/audio stim/attention-getters/youDidIt.wav';
+                video = {'Users/babylab/Desktop/ToPICK/stimuli/video/bubbles.multi.mp4'};
+                audio = '/Users/babylab/Desktop/ToPICK/stimuli/audio/attention-getters/youDidIt.wav';
                 play_video_with_audio(video, window, trial, audio, width, height);
             end
             
@@ -587,7 +587,7 @@ try
     %%%%%%%% Play intermission movie %%%%%%%%
     WaitSecs(1);
     
-    moviename = {'C:\Users\babylab\Desktop\ToPICK\2 - methods\video stim\daniel.mp4'};
+    moviename = {'Users/babylab/Desktop/ToPICK/stimuli/video/daniel.mp4'};
     play_video(moviename,window,0)
         
     %%%%%% Extensions %%%%%%%%
