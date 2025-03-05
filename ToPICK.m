@@ -23,7 +23,8 @@ try
     
     
     %% STEP 2: Psychtoolbox Setup
-    Screen('Preference', 'SkipSyncTests', 1);
+       Screen('Preference', 'VisualDebugLevel', 3);
+    Screen('Preference', 'SkipSyncTests', 2);
 
     % Get the screen numbers
     screens = Screen('Screens');
